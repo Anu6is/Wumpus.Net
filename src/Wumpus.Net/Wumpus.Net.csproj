@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Wumpus</RootNamespace>
+    <AssemblyName>Wumpus.Net</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+    <TargetFrameworks>netstandard1.1;net45</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
+    <TargetFramework>netstandard1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RestEase" Version="1.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wumpus.Net.Serialization.Json\Wumpus.Net.Serialization.Json.csproj" />
+    <ProjectReference Include="..\Wumpus.Net.Serialization\Wumpus.Net.Serialization.csproj" />
+  </ItemGroup>
+
+</Project>
